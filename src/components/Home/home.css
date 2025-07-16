@@ -1,0 +1,300 @@
+.hero_section{
+    height: 100vh;
+    width: 100vw;
+    background-color:#0D1117;
+}
+.hero-img{
+    height:70vh;
+    width:70vh;
+    background-color:#161b22;   /* #161b22*/ 
+    position:absolute;
+    border-radius: 50%;
+    top:15%;
+    left:8%;
+    text-align: center;
+    border-bottom:8px solid #7f04f3;
+}
+.my-photo{
+    height:95%;
+    animation: slide-photo 1.4s ease forwards;
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+.introTxt{
+    animation: slide-photo 1.4s ease forwards;
+}
+.hero-txt {
+    height:70%;
+    width:40vw;
+    background-color:transparent; /*#161b22*/
+    position:absolute;
+    top:15%;
+    right:8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.h-txt{
+    height:60%;
+    width:90%;
+    background-color:transparent; /*#40608d*/
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.hello{
+    font-size:1.8rem;
+    font-weight:400;
+    color: #7f04f3;
+
+}
+.introName{
+    color: #7f04f3;
+    margin: 0;
+    padding: 0;
+}
+.introPara{
+    font-size:1.2rem;
+    font-weight: 300;
+    color: #7f04f3;
+    animation:slide-media 1s ease forwards;
+
+}
+
+.social-media{
+    width: 90%;
+    height: 10%;
+    background-color:transparent; /*aliceblue*/
+    display: flex;
+    align-items: center;
+}
+.social-m-logo{
+    height:80%;
+    width: 8%;
+    background-color: transparent; /*#D4AF37*/  
+    margin-right: 20px;
+}
+.m-logo-img{
+    height:90%;
+    object-fit: cover;
+}
+.home-btns{
+    height: 10%;
+    width: 50%;
+    background-color: #a5028200;
+    position: relative;
+    right: 20%;
+}
+.home-btns button{
+    height:auto;
+    width:30%;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: 400;
+    padding:8px;
+    transition: all .5s ease;
+    margin-right: 10px;
+    border: 1px solid #7f04f3;
+}
+.homeBtns {
+    color: white;
+    font-weight: 400;
+}
+
+#h-btn-1{
+    background: #0467f3;
+}
+#h-btn-1:hover{
+    background-color: transparent;
+}
+#h-btn-2{
+    background-color:transparent;
+}
+#h-btn-2:hover{
+    background-color:#0467f3;
+    color: white;
+}
+#linkedin:hover{
+    #linkedin-pop{
+        animation: popup 1s ease forwards;
+    }
+}
+#git-hub:hover{
+    #git-hub-pop{
+        animation: popup 1s ease forwards;
+    }
+}
+#insta:hover{
+    #insta-pop{
+        animation: popup 1s ease forwards;
+    }
+}
+#wp:hover{
+    #wp-pop{
+        animation: popup 1s ease forwards;
+
+    }
+}
+.pop{
+    opacity:0;
+    height: 25px;
+    width:120px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 75px;
+    left:50px;
+}
+.pop a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 300;
+}
+#insta-pop{
+    background:linear-gradient(to right ,#fdcc36,#a50282);
+}
+#wp-pop{
+    background-color:green;
+}
+#linkedin-pop{
+    background-color: #0467f3;
+}
+#git-hub-pop{
+    background-color: #40608d;
+}
+#linkedin{
+    animation: slide-media 1s ease forwards;
+}
+#git-hub{
+    animation: slide-media 1.2s ease forwards;
+}
+#insta{
+    animation: slide-media 1.4s ease forwards;
+}
+#wp{
+    animation: slide-media 1.6s ease forwards;
+}
+@keyframes slide-media {
+    0%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateX(0);
+    }
+}
+@keyframes popup {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 100;
+        transform: translateX(-30px);
+    }
+}
+@keyframes slide-photo {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+  .hero_section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-top:100px ;
+    align-items: center;
+    position: static;
+  }
+
+  .hero-img {
+    position: static;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .my-photo {
+    height:95%;
+    left: 0;
+    bottom: 0;
+  }
+
+  .hero-txt {
+    position: static;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .h-txt {
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hello {
+    font-size: 1.5rem;
+  }
+
+  .introPara {
+    font-size:0.8rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .social-media {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .social-m-logo {
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+  }
+
+  .home-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    gap: 0.7rem;
+    position: static;
+    right: 0;
+    margin-top: 1rem;
+  }
+
+  .home-btns button {
+    width: 50%;
+    max-width: 280px;
+    font-size: 1rem;
+    padding: 9px;
+  }
+
+  .pop {
+    display: none;
+  }
+  #h-btn-1{
+        margin-bottom: 10px;
+    }
+    #h-btn-2{
+            margin-bottom: 50px;
+    }
+}
